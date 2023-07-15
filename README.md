@@ -1,14 +1,12 @@
-# [twitterbio.io](https://www.twitterbio.io/)
+# [digitalthreadsy.com](https://www.digitalthreadsy.com/)
 
-This project generates Twitter bios for you using AI.
+This project generates Threads posts for you using AI.
 
-[![Twitter Bio Generator](./public/screenshot.png)](https://www.twitterbio.io)
+[![Threads post Generator](./public/screenshot.png)](https://www.digitalthreadsy.com)
 
 ## How it works
 
 This project uses the [ChatGPT API](https://openai.com/api/) and [Vercel Edge functions](https://vercel.com/features/edge-functions) with streaming. It constructs a prompt based on the form and user input, sends it to the chatGPT API via a Vercel Edge function, then streams the response back to the application.
-
-If you'd like to see how I built this, check out the [video](https://youtu.be/JcE-1xzQTE0) or [blog post](https://vercel.com/blog/gpt-3-app-next-js-vercel-edge-functions).
 
 ## Running Locally
 
@@ -24,4 +22,4 @@ npm run dev
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nutlope/twitterbio&env=OPENAI_API_KEY&project-name=twitter-bio-generator&repo-name=twitterbio)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/espinozahector/threads-post&env=OPENAI_API_KEY&project-name=threads-post-generator&repo-name=threads-post)

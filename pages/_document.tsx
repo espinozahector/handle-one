@@ -8,19 +8,19 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
-            content="Generate your next Twitter bio in seconds."
+            content="Generate your next Threads bio in seconds."
           />
-          <meta property="og:site_name" content="twitterbio.io" />
+          <meta property="og:site_name" content="digitalthreadsy.com" />
           <meta
             property="og:description"
-            content="Generate your next Twitter bio in seconds."
+            content="Generate your next Threads post in seconds."
           />
-          <meta property="og:title" content="Twitter Bio Generator" />
+          <meta property="og:title" content="Threads post Generator" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Twitter Bio Generator" />
+          <meta name="twitter:title" content="Threads post Generator" />
           <meta
             name="twitter:description"
-            content="Generate your next Twitter bio in seconds."
+            content="Generate your next Threads bio in seconds."
           />
           <meta
             property="og:image"

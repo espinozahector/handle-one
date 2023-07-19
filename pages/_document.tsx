@@ -8,7 +8,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
-            content="Generate your next Threads bio in seconds."
+            content="Generate your next Threads post in seconds."
           />
           <meta property="og:site_name" content="digitalthreadsy.com" />
           <meta
@@ -20,15 +20,15 @@ class MyDocument extends Document {
           <meta name="twitter:title" content="Threads post Generator" />
           <meta
             name="twitter:description"
-            content="Generate your next Threads bio in seconds."
+            content="Generate your next Threads post in seconds."
           />
           <meta
             property="og:image"
-            content="https://twitterbio.io/og-image.png"
+            content="https://digitalthreadsy.com/screenshot.png"
           />
           <meta
             name="twitter:image"
-            content="https://twitterbio.io/og-image.png"
+            content="https://digitalthreadsy.com/screenshot.png"
           />
         </Head>
         <body>

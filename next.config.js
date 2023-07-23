@@ -1,11 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    domains: ['avatars.githubusercontent.com', 'avatar.vercel.sh']
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/github',
+        destination: 'https://github.com/Nutlope/twitterbio',
+        permanent: false,
+      },
+      {
+        source: '/deploy',
+        destination: 'https://vercel.com/templates/next.js/twitter-bio',
+        permanent: false,
+      },
+    ];
   },
-  experimental: {
-    serverComponentsExternalPackages: ['@tremor/react']
-  }
 };
-
-module.exports = nextConfig;

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Github from "../components/GitHub";
 import { InboxIcon } from "@heroicons/react/24/solid";
 
 export default function Header() {

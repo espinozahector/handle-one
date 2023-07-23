@@ -1,22 +1,22 @@
-import { Analytics } from '@vercel/analytics/react';
-import { Metadata } from 'next';
-import '../styles/globals.css';
+import { Analytics } from "@vercel/analytics/react";
+import { Metadata } from "next";
+import "../styles/globals.css";
 
-const title = 'Twitter Bio Generator';
-const description = 'Generate your next Twitter bio in seconds.';
+const title = "HandleOne Social Handle Checker";
+const description = "Discover if your social media handler is up for grabs";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://twitterbio.io'),
+  metadataBase: new URL("https://handleone.social"),
   title,
   description,
   openGraph: {
     title,
     description,
-    locale: 'en_US',
-    type: 'website',
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title,
     description,
   },

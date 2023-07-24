@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 from usernamechecker import UsernameChecker
 
-#checker = UsernameChecker("config.json")
+checker = UsernameChecker("config.json")
 
 class UsernameCheckRequest(BaseModel):
     requester: str
@@ -18,5 +18,5 @@ def hello_world():
 @app.post("/check/name/threads/")
 async def check_names(request: UsernameCheckRequest):
     data = request.dict()
-    #return checker.check_usernames(request['names'], request['requester'])
-    return data
+    return checker.check_usernames(data['names'], data['requester'])
+    #return data

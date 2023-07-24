@@ -1,0 +1,4 @@
+instagrapi
+threads-net
+fastapi
+uvicorn

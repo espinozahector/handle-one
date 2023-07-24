@@ -16,7 +16,7 @@ class ThreadsUsernameChecker:
         results = {}
         for name in names:
             try:
-                self.api.public_api.get_user_id(name)
+                self.api.private_api.get_user_id(name)
                 results[name] = True
             
             except Exception as e:

@@ -8,12 +8,20 @@ import Github from "../components/GitHub";
 import Header from "../components/Header";
 import LoadingDots from "../components/LoadingDots";
 
-const Accounts = ({ accounts }) => {
-  function capitalizeFirstLetter(str) {
+interface Platform {
+  name: string;
+  platforms: {
+    instagram: any;
+    threads: any;
+  };
+}
+
+const Accounts = ({ accounts }: any) => {
+  function capitalizeFirstLetter(str: string) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
-  const stringBuilder = (platform) => {
+  const stringBuilder = (platform: any) => {
     let output = "";
 
     output += capitalizeFirstLetter(platform[0]);
@@ -22,7 +30,7 @@ const Accounts = ({ accounts }) => {
 
     return output;
   };
-  return accounts.map((account, index) => (
+  return accounts.map((account: any, index: number) => (
     <div
       key={index}
       className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto"
@@ -45,7 +53,7 @@ const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [handles, setHandles] = useState("");
   const [email, setEmail] = useState("");
-  const [result, setResult] = useState([]);
+  const [result, setResult] = useState<Platform[]>([]);
   const [resultsFound, setResultsFound] = useState(false);
   const resultRef = useRef<null | HTMLDivElement>(null);
 

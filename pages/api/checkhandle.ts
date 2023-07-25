@@ -1,22 +1,28 @@
+import { NextApiRequest, NextApiResponse } from "next";
+
 if (!process.env.HANDLEONE_CHECKER_SVR) {
   throw new Error("Missing env var for HANDLE CHECKER SVR");
 }
 
+interface MyRequestBody {
+  requester: string;
+  names: string[];
+}
 // export const config = {
 //   runtime: "edge",
 // };
 
 // convert string names into an array of strings
-const validateNames = (names) => {
+const validateNames = (names: string) => {
   const regex = /@(\S+)/g;
-  const matches = names.match(regex);
+  const matches = names.match(regex) ?? [];
   const output = matches.map((match) => match.slice(1));
   return output;
 };
 
-const handler = async (req: Request, res: Response) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   // console.log("req: ", req.body);
-  const { requester, names } = req.body;
+  const { requester, names }: MyRequestBody | any = req.body;
 
   if (!names || names.length <= 0) {
     return new Response("No names in the request", { status: 400 });
@@ -42,6 +48,7 @@ const handler = async (req: Request, res: Response) => {
     const data = await response.json();
     // console.log("data: ", data.results);
     // return Response.json({ data: data });
+
     res.status(200).json({ data: data.results });
   } catch (err) {
     console.error("Error: fetching handles ", err);

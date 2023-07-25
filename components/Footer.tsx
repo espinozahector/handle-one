@@ -4,6 +4,7 @@ export default function Footer() {
   return (
     <footer className="text-center h-16 sm:h-20 w-full sm:pt-2 pt-4 border-t mt-5 flex sm:flex-row flex-col justify-between items-center px-3 space-y-3 sm:mb-0 mb-3">
       <div>
+<<<<<<< HEAD
         Powered by{" "}
         <a
           href="https://openai.com/blog/chatgpt"
@@ -22,12 +23,34 @@ export default function Footer() {
         >
           Vercel Edge Functions.
         </a>
+=======
+        {/* Powered by{' '} */}
+        {/* <a
+          href="https://openai.com/blog/chatgpt"
+          target="_blank"
+          className="font-bold hover:underline transition underline-offset-2"
+        >
+          ChatGPT{' '}
+        </a>
+        and{' '}
+        <a
+          href="https://sdk.vercel.ai/docs"
+          target="_blank"
+          className="font-bold hover:underline transition underline-offset-2"
+        >
+          Vercel AI SDK
+        </a> */}
+>>>>>>> c64cc8c073a1462ed451f0069dbd283c42692587
       </div>
       <div className="flex space-x-4 pb-4 sm:pb-0">
         {/* <Link
           href="https://twitter.com/nutlope"
           className="group"
+<<<<<<< HEAD
           aria-label="TaxPal on Twitter"
+=======
+          aria-label="Nutlope Twitter"
+>>>>>>> c64cc8c073a1462ed451f0069dbd283c42692587
         >
           <svg
             aria-hidden="true"
@@ -39,7 +62,11 @@ export default function Footer() {
         <Link
           href="https://github.com/Nutlope/twitterbio"
           className="group"
+<<<<<<< HEAD
           aria-label="TaxPal on GitHub"
+=======
+          aria-label="GitHub"
+>>>>>>> c64cc8c073a1462ed451f0069dbd283c42692587
         >
           <svg
             aria-hidden="true"

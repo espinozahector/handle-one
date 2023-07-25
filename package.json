@@ -8,6 +8,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.7",
     "@headlessui/tailwindcss": "^0.1.2",
+<<<<<<< HEAD
     "@heroicons/react": "^2.0.13",
     "@tailwindcss/forms": "^0.5.3",
     "@vercel/analytics": "^0.1.8",
@@ -17,6 +18,18 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.42.0",
     "react-hot-toast": "^2.4.0",
+=======
+    "@heroicons/react": "^2.0.18",
+    "@tailwindcss/forms": "^0.5.3",
+    "@vercel/analytics": "^0.1.8",
+    "ai": "^2.1.21",
+    "next": "^13.4.10",
+    "openai-edge": "^1.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.42.0",
+    "react-hot-toast": "^2.4.1",
+>>>>>>> c64cc8c073a1462ed451f0069dbd283c42692587
     "react-use-measure": "^2.1.1"
   },
   "devDependencies": {

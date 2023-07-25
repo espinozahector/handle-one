@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
+<<<<<<< HEAD
   reactStrictMode: true,
   async redirects() {
     return [
@@ -14,5 +15,9 @@ module.exports = {
         permanent: false,
       },
     ];
+=======
+  async redirects() {
+    return [];
+>>>>>>> c64cc8c073a1462ed451f0069dbd283c42692587
   },
 };

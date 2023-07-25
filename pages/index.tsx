@@ -39,10 +39,10 @@ const Accounts = ({ accounts }: any) => {
         <p>{account.name}</p>
         <hr />
         {Object.entries(account.platforms).map((platform, index) => (
-          <>
+          <div key={index}>
             <br />
             <p key={index}>{stringBuilder(platform)}</p>
-          </>
+          </div>
         ))}
       </div>
     </div>

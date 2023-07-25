@@ -4,8 +4,12 @@ export default function Footer() {
   return (
     <footer className="text-center h-16 sm:h-20 w-full sm:pt-2 pt-4 border-t mt-5 flex sm:flex-row flex-col justify-between items-center px-3 space-y-3 sm:mb-0 mb-3">
       <div>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
         Powered by{" "}
+=======
+        {/* Powered by{" "}
+>>>>>>> Stashed changes
         <a
           href="https://openai.com/blog/chatgpt"
           target="_blank"
@@ -22,6 +26,7 @@ export default function Footer() {
           className="font-bold hover:underline transition underline-offset-2"
         >
           Vercel Edge Functions.
+<<<<<<< Updated upstream
         </a>
 =======
         {/* Powered by{' '} */}
@@ -41,6 +46,9 @@ export default function Footer() {
           Vercel AI SDK
         </a> */}
 >>>>>>> c64cc8c073a1462ed451f0069dbd283c42692587
+=======
+        </a> */}
+>>>>>>> Stashed changes
       </div>
       <div className="flex space-x-4 pb-4 sm:pb-0">
         {/* <Link

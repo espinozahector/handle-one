@@ -1,8 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< HEAD
-=======
 
 .loading {
   display: inline-flex;
@@ -44,4 +42,3 @@
     opacity: 0.2;
   }
 }
->>>>>>> c64cc8c073a1462ed451f0069dbd283c42692587

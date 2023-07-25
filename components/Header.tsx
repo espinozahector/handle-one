@@ -1,13 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
 import { InboxIcon } from "@heroicons/react/24/solid";
->>>>>>> c64cc8c073a1462ed451f0069dbd283c42692587
-=======
-import { InboxIcon } from "@heroicons/react/24/solid";
->>>>>>> Stashed changes
 
 export default function Header() {
   return (
@@ -21,35 +14,12 @@ export default function Header() {
           height={32}
         /> */}
         <h1 className="sm:text-4xl text-2xl font-bold ml-2 tracking-tight">
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-          Digitalthreadsy.com
-        </h1>
-      </Link>
-=======
           handleone.social
         </h1>
       </Link>
       <a
         className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100 mb-5"
         href="/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <InboxIcon />
-        <p>Notify Me</p>
-      </a>
->>>>>>> c64cc8c073a1462ed451f0069dbd283c42692587
-      {/* <a
-        href="https://vercel.com/templates/next.js/twitter-bio"
-=======
-          handleone.social
-        </h1>
-      </Link>
-      <a
-        className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100 mb-5"
-        href="/"
->>>>>>> Stashed changes
         target="_blank"
         rel="noopener noreferrer"
       >

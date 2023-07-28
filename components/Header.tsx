@@ -1,3 +1,5 @@
+import { useRef, useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 import { InboxIcon } from "@heroicons/react/24/solid";
@@ -17,15 +19,10 @@ export default function Header() {
           handleone.social
         </h1>
       </Link>
-      <a
-        className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100 mb-5"
-        href="/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <button className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100 mb-5">
         <InboxIcon />
         <p>Notify Me</p>
-      </a>
+      </button>
     </header>
   );
 }

@@ -30,7 +30,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   // console.log("svr: ", process.env.HANDLEONE_CHECKER_SVR);
 
   const arrayNames = validateNames(names);
-  console.log("arrayNames: ", arrayNames);
+  // console.log("arrayNames: ", arrayNames);
   try {
     const response = await fetch(
       process.env.HANDLEONE_CHECKER_SVR + "/check/name/threads/",

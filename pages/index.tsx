@@ -1,13 +1,14 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import Footer from "../components/Footer";
-import Github from "../components/GitHub";
 import Header from "../components/Header";
 import LoadingDots from "../components/LoadingDots";
-
+import Accounts from "../components/Accounts";
+import HeadTitle from "../components/Head";
+import TextAreaHandles from "../components/customInputs/TextAreaHandles";
+import InputEmail from "../components/customInputs/InputEmail";
 interface Platform {
   name: string;
   platforms: {
@@ -16,43 +17,15 @@ interface Platform {
   };
 }
 
-const Accounts = ({ accounts }: any) => {
-  function capitalizeFirstLetter(str: string) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
-  const stringBuilder = (platform: any) => {
-    let output = "";
-
-    output += capitalizeFirstLetter(platform[0]);
-    output += " ";
-    output += platform[1] ? "❌" : "✔";
-
-    return output;
-  };
-  return accounts.map((account: any, index: number) => (
-    <div
-      key={index}
-      className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto"
-    >
-      <div className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition border">
-        <p>{account.name}</p>
-        <hr />
-        {Object.entries(account.platforms).map((platform, index) => (
-          <div key={index}>
-            <br />
-            <p key={index}>{stringBuilder(platform)}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  ));
-};
-
 const Home: NextPage = () => {
+  // If requesting for handles
   const [loading, setLoading] = useState(false);
+
+  // Input Fields for handles
   const [handles, setHandles] = useState("");
   const [email, setEmail] = useState("");
+
+  // Results
   const [result, setResult] = useState<Platform[]>([]);
   const [resultsFound, setResultsFound] = useState(false);
   const resultRef = useRef<null | HTMLDivElement>(null);
@@ -80,7 +53,7 @@ const Home: NextPage = () => {
       }),
     });
     const data = await response.json();
-    // console.log("data: ", data.data);
+    console.log("data: ", data.data);
 
     setLoading(false);
     const newData = data?.data ?? [];
@@ -100,10 +73,7 @@ const Home: NextPage = () => {
 
   return (
     <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
-      <Head>
-        <title>HandleOne - Threads handle notifier</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <HeadTitle />
 
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
@@ -112,6 +82,7 @@ const Home: NextPage = () => {
           single click! 🚀✨
         </h1>
         <p className="text-slate-500 mt-5">11,128 handles checked so far.</p>
+
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
             <Image
@@ -129,29 +100,30 @@ const Home: NextPage = () => {
               .
             </p>
           </div>
-          <textarea
+          <TextAreaHandles handles={handles} setHandles={setHandles} />
+          {/* <textarea
             value={handles}
             onChange={(e) => setHandles(e.target.value)}
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={`@handle \n@etc \n@funny`}
-          />
+          /> */}
           <div className="flex mb-5 items-center space-x-3">
             <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
             <p className="text-left font-medium">Input your email</p>
           </div>
           <div className="block">
-            <input
+            <InputEmail email={email} setEmail={setEmail} />
+            {/* <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
               placeholder={`johnny@handleone.social`}
-            />
-            {/* <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} /> */}
+            /> */}
           </div>
 
-          {!loading && (
+          {!loading ? (
             <button
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
               // onClick={(e) => generateBio(e)}
@@ -159,8 +131,7 @@ const Home: NextPage = () => {
             >
               Get It Now!&rarr;
             </button>
-          )}
-          {loading && (
+          ) : (
             <button
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
               disabled
@@ -168,6 +139,14 @@ const Home: NextPage = () => {
               <LoadingDots color="white" style="large" />
             </button>
           )}
+          {/* {loading && (
+            <button
+              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
+              disabled
+            >
+              <LoadingDots color="white" style="large" />
+            </button>
+          )} */}
         </div>
         <Toaster
           position="top-center"
